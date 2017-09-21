@@ -1,37 +1,33 @@
-> seq(1:13,4)
-Error in seq.default(1:13, 4) : 'from' must be of length 1
 > seq(1,13,4)
 [1]  1  5  9 13
+
 > seq(1,5,0.2)
  [1] 1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0 3.2 3.4 3.6 3.8 4.0 4.2 4.4
 [19] 4.6 4.8 5.0
+
 > 3:1
 [1] 3 2 1
+
 > seq(10,5,0.2)
 Error in seq.default(10, 5, 0.2) : wrong sign in 'by' argument
-> v = z[seq(1,5,2)]
-Error: object 'z' not found
+
+Doesn't work!
+
+
 > z = c(1,3,5,7,9,11)
 > v = z[seq(1,5,2)]
 > v
 [1] 1 5 9
-> z = c(1,32354, 44468905,7,444,11)
-> v = z[seq(1,5,2)]
-> v
-[1]        1 44468905      444
-> z = c(1,32354,44468905,7,444,11)
-> v = z[seq(1,5,2)]
-> z = c(1,32354,44468905,7,444,11)
-> v = z[seq(1,5,2)]
-> v
-[1]        1 44468905      444
-> v = z[c(2,1,3)]
-> v
-[1]    32354        1 44468905
+
+This grabs each index from 1-5 by 2. In this case that is 1, 5, and 9.
+
 > z[9]=33
 > z
 [1]        1    32354 44468905        7      444       11       NA       NA
 [9]       33
+
+If the index is not there, it adds it.
+
 > x=1:10
 > x
  [1]  1  2  3  4  5  6  7  8  9 10
@@ -52,6 +48,9 @@ Error: object 'z' not found
 > h = 1/(0.5)
 > h
 [1] 2
+
+Approaches limit.
+
 > n = 50
 > g = (r^(0:n))
 > g
@@ -68,4 +67,4 @@ Error: object 'z' not found
 [51] 8.881784e-16
 > sum(g)
 [1] 2
-> 
+This looks like it hits the limit, but really, it just doesn't show b/c of sig figs.
