@@ -17,37 +17,24 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-> x = c(5,4,6,7)
-> x
-[1] 5 4 6 7
-> x1 = %%x
-Error: unexpected SPECIAL in "x1 = %%"
-> x1 = x%%
-+ 
-+ 
-+ f
-Error: object 'f' not found
-> x%
-Error: unexpected input in "x%"
-> %x
-Error: unexpected input in "%x"
-> x1 = %%(x)
-Error: unexpected SPECIAL in "x1 = %%"
-> x1 = %x%
-Error: unexpected SPECIAL in "x1 = %x%"
 > 5498745 %%4
 [1] 1
 > 5498745 %%5
 [1] 0
+
+The %% gives the remainder.
+
 > 5498745 %/%5
-[1] 1099749
-> 5498745%/%5
 [1] 1099749
 > 5498745%/%4
 [1] 1374686
+
+The %/% gives the quotient
+
 > x = c(4,5,6)
 > y = c (5,6,7,8)
 > y+x
 [1]  9 11 13 12
 In y + x : longer object length is not a multiple of shorter object length
-> 
+
+R cannot add vectors that are not multiples of one another.
