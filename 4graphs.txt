@@ -1,0 +1,7 @@
+x = 3:8
+y = ((5*x)+3)
+par(mfrow = c(2,2))
+plot(y~x,xlim = c(3,8),type = "l", lty = 1, col="blue")
+plot(y~x,xlim = c(3,8),type = "l", lty = 2, col="red")
+plot(y~x,xlim = c(3,8),type = "l", lty = 3, col="green")
+plot(y~x,xlim = c(3,8),type = "l", lty = 4, col="purple")
