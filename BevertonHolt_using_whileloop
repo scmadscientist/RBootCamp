@@ -1,0 +1,23 @@
+> a <- 1.1
+> b <- 0.001
+> T <- seq(from=1,to=200,by=1)
+> N <- numeric(length(T))
+> n <- 2
+> while (TRUE) {
++   n.new <- a*n/(1+b*n)
++   if (n==n.new)break
++ n = n.new
++ }
+> phi <- 20
+> while (TRUE) {
++   phi.new <- 1+1/phi
++   if (phi==phi.new) break
++   phi <- phi.new
++ }
+> phi
+[1] 1.618034
+> print(c(n,n.new))
+[1] 100 100
+> print(c(phi,phi.new))
+[1] 1.618034 1.618034
+> 
