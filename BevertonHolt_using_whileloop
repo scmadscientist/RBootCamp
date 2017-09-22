@@ -18,6 +18,5 @@
 [1] 1.618034
 > print(c(n,n.new))
 [1] 100 100
-> print(c(phi,phi.new))
-[1] 1.618034 1.618034
-> 
+
+n should stop changing at 100, and that is what appears to have happened here.
